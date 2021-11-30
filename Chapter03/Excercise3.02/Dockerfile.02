@@ -1,0 +1,11 @@
+FROM alpine
+
+RUN apk update \
+  && apk add wget curl \
+  && wget -O test.txt https://github.com/PacktWorkshops/The-Docker-Workshop/blob/master/Chapter03/Exercise3.02/100MB.bin
+
+WORKDIR /var/www/html/
+
+ADD Dockerfile.tar.gz /var/www/html/
+
+RUN cat Dockerfile
