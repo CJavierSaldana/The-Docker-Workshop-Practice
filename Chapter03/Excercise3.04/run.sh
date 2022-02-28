@@ -15,3 +15,5 @@ docker run -it scratch-test
 
 # reviweing the history of the image
 docker history scratch-test
+
+docker image ls
